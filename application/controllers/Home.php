@@ -1,6 +1,6 @@
 <?php
 
-class Blog extends CI_Controller{
+class Home extends CI_Controller{
 
   /*public function __construct(){
     parent::__construct();
@@ -9,14 +9,16 @@ class Blog extends CI_Controller{
 
   public function index(){
     //echo "hello this is index function"
-    $arr['value1'] = "First subhead";
-    $arr['value2'] = "Second subhead";
-    $arr['value3'] = "Third subhead";
-    $this->load->model('blog_model');
-    $profile=$this->blog_model->getProfile('kabadi');
-    $arr['profile'] = $profile;
+    $data=array(
+      'title' => "HOME", 
+      'page'=>"login_view.php"
+      );
+    //$this->load->model('blog_model');
+    //$profile=$this->blog_model->getProfile('kabadi');
+    //$arr['profile'] = $profile;
     //print_r($profile);
-    $this->load->view('blog_view',$arr);
+    //echo base_url();
+    $this->load->view('template',$data);
   }
 
   public function one($p1,$p2){

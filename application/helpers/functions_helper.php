@@ -9,8 +9,6 @@
      * Helper functions.
      */
 
-    require_once("constants.php");
-
     /**
      * Apologizes to user with message.
      */
@@ -197,19 +195,19 @@
     function render($template, $values = [])
     {
         // if template exists, render it
-        if (file_exists("../templates/$template"))
+        if (file_exists("../views/$template"))
         {
             // extract variables into local scope
             extract($values);
 
             // render header
-            require("../templates/header.php");
+            require("../views/header.php");
 
             // render template
-            require("../templates/$template");
+            require("../views/$template");
 
             // render footer
-            require("../templates/footer.php");
+            require("../views/footer.php");
         }
 
         // else err
