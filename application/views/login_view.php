@@ -14,7 +14,7 @@
           </div>
           <div class="form-group">
               
-              <select class='col-md-3' name='optionlist'>
+              <select class='span-9' name='optionlist'>
                 <option selected='selected' value='0'>Select Type of Officer</option>
                 <option value='1'>Officer</option>
                 <option value='2'>Reporting Officer</option>
